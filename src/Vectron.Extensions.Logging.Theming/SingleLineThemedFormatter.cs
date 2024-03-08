@@ -153,7 +153,9 @@ internal sealed class SingleLineThemedFormatter<TOptions>(
 
         var color = CurrentTheme.GetLogLevelColor(logLevel);
         textWriter.WriteColored(color, logLevelString, FormatterOptions.ColorWholeLine);
-        textWriter.Write(LogLevelPadding);
+
+        var color2 = CurrentTheme.GetMessageColor(LogLevelPadding);
+        textWriter.WriteColored(color2, LogLevelPadding, FormatterOptions.ColorWholeLine);
     }
 
     private void WriteLogMessage(TextWriter textWriter, string message)
