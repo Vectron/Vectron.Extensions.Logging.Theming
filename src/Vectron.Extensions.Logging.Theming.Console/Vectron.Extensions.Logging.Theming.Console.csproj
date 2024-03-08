@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vectron.Extensions.Logging.Theming\Vectron.Extensions.Logging.Theming.csproj" />
+  </ItemGroup>
+
+</Project>
