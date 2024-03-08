@@ -30,9 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25A21EBE-9F9F-490D-8C91-2D11F6557410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectron.Extensions.Logging.Theming", "src\Vectron.Extensions.Logging.Theming\Vectron.Extensions.Logging.Theming.csproj", "{FBE75B0B-FCD4-4DCC-AA02-E19759E3D500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vectron.Extensions.Logging.Theming", "src\Vectron.Extensions.Logging.Theming\Vectron.Extensions.Logging.Theming.csproj", "{FBE75B0B-FCD4-4DCC-AA02-E19759E3D500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectron.Extensions.Logging.Theming.Console", "src\Vectron.Extensions.Logging.Theming.Console\Vectron.Extensions.Logging.Theming.Console.csproj", "{3CB90483-B4BB-4470-86C0-1A41A7CEB35A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vectron.Extensions.Logging.Theming.Console", "src\Vectron.Extensions.Logging.Theming.Console\Vectron.Extensions.Logging.Theming.Console.csproj", "{3CB90483-B4BB-4470-86C0-1A41A7CEB35A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
