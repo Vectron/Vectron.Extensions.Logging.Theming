@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetPlatformIdentifier>windows</TargetPlatformIdentifier>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Vectron.Extensions.Logging.TextBlock" Version="4.2.104" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Vectron.Extensions.Logging.Theming\Vectron.Extensions.Logging.Theming.csproj" />
+  </ItemGroup>
+  
+</Project>
