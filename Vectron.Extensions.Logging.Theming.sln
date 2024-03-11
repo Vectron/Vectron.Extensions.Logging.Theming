@@ -40,9 +40,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{C9B3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theming.TextBlock.Sample", "samples\Theming.TextBlock.Sample\Theming.TextBlock.Sample.csproj", "{35734B1D-2E47-4A04-AFF3-C18669B23FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theming.Console.Sample", "samples\Theming.Console.Sample\Theming.Console.Sample.csproj", "{28D074D3-3317-4F8E-9F1B-79A52104F32A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theming.Console.Sample", "samples\Theming.Console.Sample\Theming.Console.Sample.csproj", "{28D074D3-3317-4F8E-9F1B-79A52104F32A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleHelpers", "samples\SampleHelpers\SampleHelpers.csproj", "{FBC51A12-03A7-4DB5-82ED-6381D729D1BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleHelpers", "samples\SampleHelpers\SampleHelpers.csproj", "{FBC51A12-03A7-4DB5-82ED-6381D729D1BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{796090F2-31D6-4F52-80C1-0F693D8872AD}"
+	ProjectSection(SolutionItems) = preProject
+		assets\MelFullLine.png = assets\MelFullLine.png
+		assets\MelLevelOnly.png = assets\MelLevelOnly.png
+		assets\NLogFullLine.png = assets\NLogFullLine.png
+		assets\NLogLevelOnly.png = assets\NLogLevelOnly.png
+		assets\SerilogFullLine.png = assets\SerilogFullLine.png
+		assets\SerilogLevelOnly.png = assets\SerilogLevelOnly.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
