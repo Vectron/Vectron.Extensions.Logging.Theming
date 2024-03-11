@@ -57,14 +57,6 @@ internal sealed partial class MainWindowViewModel : ObservableObject
     private void ChangeLoggingTheme(string theme) => configuration["Logging:TextBlock:FormatterOptions:Theme"] = theme;
 
     [RelayCommand]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1848:Use the LoggerMessage delegates", Justification = "Testing only.")]
     private void GenerateLogMessages()
-    {
-        logger.LogTrace("This is a trace message.");
-        logger.LogDebug("This is a debug message.");
-        logger.LogInformation("This is a information message.");
-        logger.LogWarning("This is a warning message.");
-        logger.LogError("This is a error message.");
-        logger.LogCritical("This is a critical message.");
-    }
+        => logger.WriteAll();
 }
