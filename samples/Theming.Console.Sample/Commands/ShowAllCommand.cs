@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SampleHelpers;
+using Vectron.Ansi;
 using Vectron.Extensions.Logging.Theming;
 using Vectron.InteractiveConsole.Commands;
 
@@ -34,7 +35,28 @@ internal sealed class ShowAllCommand(IConfiguration configuration, IEnumerable<I
         foreach (var theme in validThemes)
         {
             configuration["Logging:Console:FormatterOptions:Theme"] = theme;
-            System.Console.WriteLine($"Theme changed to {theme}");
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "false";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "false";
+            System.Console.Out.WriteLine();
+            System.Console.Out.WriteColored($"Theme: {theme}, IncludeScopes: false, ColorWholeLine: false" + Environment.NewLine, AnsiColor.Cyan);
+            logger.WriteAll();
+
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "true";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "false";
+            System.Console.Out.WriteLine();
+            System.Console.Out.WriteColored($"Theme: {theme}, IncludeScopes: true, ColorWholeLine: false" + Environment.NewLine, AnsiColor.Cyan);
+            logger.WriteAll();
+
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "false";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "true";
+            System.Console.Out.WriteLine();
+            System.Console.Out.WriteColored($"Theme: {theme}, IncludeScopes: false, ColorWholeLine: true" + Environment.NewLine, AnsiColor.Cyan);
+            logger.WriteAll();
+
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "false";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "true";
+            System.Console.Out.WriteLine();
+            System.Console.Out.WriteColored($"Theme: {theme}, IncludeScopes: true, ColorWholeLine: true" + Environment.NewLine, AnsiColor.Cyan);
             logger.WriteAll();
         }
     }

@@ -62,8 +62,26 @@ internal sealed partial class MainWindowViewModel : ObservableObject
     {
         foreach (var theme in LoggingThemes)
         {
-            configuration["Logging:TextBlock:FormatterOptions:Theme"] = theme;
+            configuration["Logging:Console:FormatterOptions:Theme"] = theme;
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "false";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "false";
             await Task.Delay(1000).ConfigureAwait(false);
+            LogOptionsChanged(theme, includeScopes: false, colorWholeLine: false);
+            logger.WriteAll();
+
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "true";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "false";
+            LogOptionsChanged(theme, includeScopes: true, colorWholeLine: false);
+            logger.WriteAll();
+
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "false";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "true";
+            LogOptionsChanged(theme, includeScopes: false, colorWholeLine: true);
+            logger.WriteAll();
+
+            configuration["Logging:Console:FormatterOptions:IncludeScopes"] = "false";
+            configuration["Logging:Console:FormatterOptions:ColorWholeLine"] = "true";
+            LogOptionsChanged(theme, includeScopes: true, colorWholeLine: true);
             logger.WriteAll();
         }
     }
@@ -71,4 +89,7 @@ internal sealed partial class MainWindowViewModel : ObservableObject
     [RelayCommand]
     private void GenerateLogMessages()
         => logger.WriteAll();
+
+    [LoggerMessage(10, LogLevel.Information, "Theme: {Theme}, IncludeScopes: {IncludeScopes}, ColorWholeLine: {ColorWholeLine}")]
+    private partial void LogOptionsChanged(string theme, bool includeScopes, bool colorWholeLine);
 }
