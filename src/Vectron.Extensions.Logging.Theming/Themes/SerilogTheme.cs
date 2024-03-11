@@ -17,7 +17,7 @@ internal sealed class SerilogTheme : ITheme
     public string GetEventIdColor(EventId eventId) => "\x1b[38;5;008m";
 
     /// <inheritdoc/>
-    public string GetExceptionColor(Exception exception) => string.Empty;
+    public string GetExceptionColor(Exception exception) => "\x1b[30m";
 
     /// <inheritdoc/>
     public string GetLineColor(LogLevel logLevel) => GetLogLevelColor(logLevel);
@@ -40,8 +40,8 @@ internal sealed class SerilogTheme : ITheme
     public string GetMessageColor(string message) => "\x1b[38;5;000m";
 
     /// <inheritdoc/>
-    public string GetScopeColor(object? scope) => string.Empty;
+    public string GetScopeColor(object? scope) => "\x1b[30m";
 
     /// <inheritdoc/>
-    public string GetTimeColor(DateTimeOffset dateTimeOffset) => string.Empty;
+    public string GetTimeColor(DateTimeOffset dateTimeOffset) => "\x1b[30m";
 }

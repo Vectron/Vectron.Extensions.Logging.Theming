@@ -11,13 +11,13 @@ internal sealed class NLogTheme : ITheme
     public string Name => "NLog";
 
     /// <inheritdoc/>
-    public string GetCategoryColor(string category) => string.Empty;
+    public string GetCategoryColor(string category) => "\x1b[30m";
 
     /// <inheritdoc/>
-    public string GetEventIdColor(EventId eventId) => string.Empty;
+    public string GetEventIdColor(EventId eventId) => "\x1b[30m";
 
     /// <inheritdoc/>
-    public string GetExceptionColor(Exception exception) => string.Empty;
+    public string GetExceptionColor(Exception exception) => "\x1b[30m";
 
     /// <inheritdoc/>
     public string GetLineColor(LogLevel logLevel) => GetLogLevelColor(logLevel);
@@ -37,11 +37,11 @@ internal sealed class NLogTheme : ITheme
         };
 
     /// <inheritdoc/>
-    public string GetMessageColor(string message) => string.Empty;
+    public string GetMessageColor(string message) => "\x1b[30m";
 
     /// <inheritdoc/>
-    public string GetScopeColor(object? scope) => string.Empty;
+    public string GetScopeColor(object? scope) => "\x1b[30m";
 
     /// <inheritdoc/>
-    public string GetTimeColor(DateTimeOffset dateTimeOffset) => string.Empty;
+    public string GetTimeColor(DateTimeOffset dateTimeOffset) => "\x1b[30m";
 }
