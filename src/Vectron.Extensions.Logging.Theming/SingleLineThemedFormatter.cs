@@ -69,16 +69,15 @@ internal sealed class SingleLineThemedFormatter<TOptions>(
         var length = 0;
         foreach (LogLevel level in Enum.GetValues(typeof(LogLevel)))
         {
-            try
+            if (level == LogLevel.None)
             {
-                var levelString = GetLogLevelString(level);
-                if (levelString.Length > length)
-                {
-                    length = levelString.Length;
-                }
+                continue;
             }
-            catch (ArgumentOutOfRangeException)
+
+            var levelString = GetLogLevelString(level);
+            if (levelString.Length > length)
             {
+                length = levelString.Length;
             }
         }
 
