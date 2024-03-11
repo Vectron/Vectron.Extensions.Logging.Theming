@@ -19,8 +19,22 @@ public static partial class LogMessages
         logger.WriteWarningMessage();
         logger.WriteErrorMessage();
         logger.WriteCriticalMessage();
-        var testException = new NotSupportedException();
-        logger.WriteExceptionMessage(testException);
+
+        try
+        {
+            try
+            {
+                throw new NotSupportedException("The inner exception");
+            }
+            catch (NotSupportedException inner)
+            {
+                throw new InvalidOperationException("Something went wrong", inner);
+            }
+        }
+        catch (InvalidOperationException ex)
+        {
+            logger.WriteExceptionMessage(ex);
+        }
     }
 
     /// <summary>
