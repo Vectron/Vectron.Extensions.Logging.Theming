@@ -48,6 +48,8 @@
             </ComboBox>
 
             <Button Command="{Binding GenerateLogMessagesCommand}" Content="Generate messages" />
+
+            <Button Command="{Binding DemoAllCommand}" Content="Demo all" />
         </StackPanel>
 
         <GridSplitter Grid.Row="1" />

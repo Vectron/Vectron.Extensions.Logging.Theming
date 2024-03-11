@@ -5,6 +5,7 @@ using CommunityToolkit.Mvvm.Input;
 using ControlzEx.Theming;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using SampleHelpers;
 
 namespace Vectron.Extensions.Logging.Theming.TextBlock.Sample;
 
@@ -55,6 +56,17 @@ internal sealed partial class MainWindowViewModel : ObservableObject
 
     [RelayCommand]
     private void ChangeLoggingTheme(string theme) => configuration["Logging:TextBlock:FormatterOptions:Theme"] = theme;
+
+    [RelayCommand]
+    private async Task DemoAll()
+    {
+        foreach (var theme in LoggingThemes)
+        {
+            configuration["Logging:TextBlock:FormatterOptions:Theme"] = theme;
+            await Task.Delay(1000).ConfigureAwait(false);
+            logger.WriteAll();
+        }
+    }
 
     [RelayCommand]
     private void GenerateLogMessages()
