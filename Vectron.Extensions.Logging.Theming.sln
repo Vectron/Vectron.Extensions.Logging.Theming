@@ -37,6 +37,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vectron.Extensions.Logging.Theming.TextBlock", "src\Vectron.Extensions.Logging.Theming.TextBlock\Vectron.Extensions.Logging.Theming.TextBlock.csproj", "{A9263C43-F2B6-42D0-B6B5-41EDD74EF004}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{C9B3FBD4-961D-42D0-8662-78B762B96328}"
+	ProjectSection(SolutionItems) = preProject
+		samples\Directory.Build.props = samples\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theming.TextBlock.Sample", "samples\Theming.TextBlock.Sample\Theming.TextBlock.Sample.csproj", "{35734B1D-2E47-4A04-AFF3-C18669B23FBE}"
 EndProject
