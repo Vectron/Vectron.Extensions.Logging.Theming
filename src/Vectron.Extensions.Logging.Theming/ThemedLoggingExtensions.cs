@@ -21,8 +21,11 @@ public static class ThemedLoggingExtensions
     {
         services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, NoColorTheme>());
         services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, MELTheme>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, MELDarkTheme>());
         services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, NLogTheme>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, NLogDarkTheme>());
         services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, SerilogTheme>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<ITheme, SerilogDarkTheme>());
 
         services.TryAddSingleton<IThemeProvider, ThemeProvider>();
 
