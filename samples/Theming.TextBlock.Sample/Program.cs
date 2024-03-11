@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SampleHelpers;
 using Vectron.Extensions.Hosting.Wpf;
 using Vectron.Extensions.Logging.Theming.TextBlock;
 using Vectron.Extensions.Logging.Theming.TextBlock.Sample;

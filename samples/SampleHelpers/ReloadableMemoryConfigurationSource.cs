@@ -1,13 +1,13 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Memory;
 
-namespace Vectron.Extensions.Logging.Theming.TextBlock.Sample;
+namespace SampleHelpers;
 
 /// <summary>
 /// Represents in-memory data as an <see cref="IConfigurationSource"/>.
 /// That triggers change events.
 /// </summary>
-internal sealed class ReloadableMemoryConfigurationSource : IConfigurationSource
+public sealed class ReloadableMemoryConfigurationSource : IConfigurationSource
 {
     /// <summary>
     /// Gets or sets the initial key value configuration pairs.

@@ -1,12 +1,12 @@
 using System.Collections;
 using Microsoft.Extensions.Configuration;
 
-namespace Vectron.Extensions.Logging.Theming.TextBlock.Sample;
+namespace SampleHelpers;
 
 /// <summary>
 /// In-memory implementation of <see cref="IConfigurationProvider"/>.
 /// </summary>
-internal sealed class ReloadableMemoryConfigurationProvider : ConfigurationProvider, IEnumerable<KeyValuePair<string, string?>>
+public sealed class ReloadableMemoryConfigurationProvider : ConfigurationProvider, IEnumerable<KeyValuePair<string, string?>>
 {
     private readonly ReloadableMemoryConfigurationSource source;
 

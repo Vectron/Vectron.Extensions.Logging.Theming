@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Vectron.Extensions.Logging.Theming.TextBlock\Vectron.Extensions.Logging.Theming.TextBlock.csproj" />
+    <ProjectReference Include="..\SampleHelpers\SampleHelpers.csproj" />
   </ItemGroup>
 
   <ItemGroup>
