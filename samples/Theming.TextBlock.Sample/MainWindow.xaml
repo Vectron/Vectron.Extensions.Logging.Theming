@@ -39,7 +39,7 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <ComboBox ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedLoggingTheme}">
+            <ComboBox ItemsSource="{Binding LoggingThemes}" SelectedItem="{Binding SelectedLoggingTheme}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction Command="{Binding ChangeLoggingThemeCommand}" CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=ComboBox}}" />

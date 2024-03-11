@@ -21,13 +21,13 @@ internal sealed partial class MainWindowViewModel : ObservableObject
     private IEnumerable<Theme> applicationThemes;
 
     [ObservableProperty]
+    private IEnumerable<string> loggingThemes;
+
+    [ObservableProperty]
     private Theme? selectedApplicationTheme;
 
     [ObservableProperty]
     private string? selectedLoggingTheme;
-
-    [ObservableProperty]
-    private IEnumerable<string> themes;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="MainWindowViewModel"/> class.
@@ -46,7 +46,7 @@ internal sealed partial class MainWindowViewModel : ObservableObject
         selectedApplicationTheme = themeManager.DetectTheme() ?? applicationThemes.First();
 
         var themesCollection = new ObservableCollection<string>(loggingThemes.Select(x => x.Name));
-        themes = new ReadOnlyObservableCollection<string>(themesCollection);
+        this.loggingThemes = new ReadOnlyObservableCollection<string>(themesCollection);
         selectedLoggingTheme = configuration["Logging:TextBlock:FormatterOptions:Theme"] ?? "None";
     }
 
