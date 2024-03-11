@@ -21,8 +21,11 @@ Vectron.Extensions.Logging.Theming provides a single line log formatter (based o
 | Option | Description |
 | --- | --- |
 | MEL | Use the colors like 'Microsoft.Extensions.Logging.Console' |
+| MEL-Dark | Use the colors like 'Microsoft.Extensions.Logging.Console', but for a dark background |
 | NLog | Use the colors like 'NLog' |
+| NLog-Dark | Use the colors like 'NLog', but for a dark background |
 | Serilog | Use the colors like 'Serilog' |
+| Serilog-Dark | Use the colors like 'Serilog', but for a dark background |
 | None | Don't colorize the output |
 
 ## Output examples:  
