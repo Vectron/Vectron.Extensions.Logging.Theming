@@ -32,10 +32,7 @@ public interface IThemedFormatterOptions
     /// <summary>
     /// Gets format string used to format timestamp in logging messages. Defaults to <see langword="null" />.
     /// </summary>
-#if NET7_0_OR_GREATER
     [System.Diagnostics.CodeAnalysis.StringSyntax(System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.DateTimeFormat)]
-#endif
-
     public string? TimestampFormat
     {
         get;
