@@ -67,7 +67,7 @@ internal sealed class SingleLineThemedFormatter<TOptions>(
     private static int GetMaximumLogLevelLength()
     {
         var length = 0;
-        foreach (LogLevel level in Enum.GetValues(typeof(LogLevel)))
+        foreach (var level in Enum.GetValues<LogLevel>())
         {
             if (level == LogLevel.None)
             {
