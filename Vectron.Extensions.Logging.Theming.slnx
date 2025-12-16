@@ -1,0 +1,45 @@
+<Solution>
+  <Folder Name="/assets/">
+    <File Path="assets/MelFullLine.png" />
+    <File Path="assets/MelLevelOnly.png" />
+    <File Path="assets/NLogFullLine.png" />
+    <File Path="assets/NLogLevelOnly.png" />
+    <File Path="assets/SerilogFullLine.png" />
+    <File Path="assets/SerilogLevelOnly.png" />
+  </Folder>
+
+  <Folder Name="/samples/">
+    <File Path="samples/Directory.Build.props" />
+    <Project Path="samples/SampleHelpers/SampleHelpers.csproj" />
+    <Project Path="samples/Theming.Console.Sample/Theming.Console.Sample.csproj" />
+    <Project Path="samples/Theming.TextBlock.Sample/Theming.TextBlock.Sample.csproj" />
+  </Folder>
+
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path=".runsettings" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.build.targets" />
+    <File Path="LICENSE.txt" />
+    <File Path="README.md" />
+    <File Path="version.json" />
+  </Folder>
+
+  <Folder Name="/Solution Items/.github/">
+    <File Path=".github/dependabot.yml" />
+    <File Path=".github/release.yml" />
+  </Folder>
+
+  <Folder Name="/Solution Items/.github/workflows/">
+    <File Path=".github/workflows/BuildTestDeploy.yml" />
+    <File Path=".github/workflows/DependabotAutoMerge.yml" />
+  </Folder>
+
+  <Folder Name="/src/">
+    <Project Path="src/Vectron.Extensions.Logging.Theming.Console/Vectron.Extensions.Logging.Theming.Console.csproj" />
+    <Project Path="src/Vectron.Extensions.Logging.Theming.TextBlock/Vectron.Extensions.Logging.Theming.TextBlock.csproj" />
+    <Project Path="src/Vectron.Extensions.Logging.Theming/Vectron.Extensions.Logging.Theming.csproj" />
+  </Folder>
+</Solution>
