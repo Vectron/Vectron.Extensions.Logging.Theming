@@ -12,7 +12,7 @@ namespace Theming.Console.Sample.Commands;
 /// </summary>
 internal sealed class ShowAllCommand(IConfiguration configuration, IEnumerable<ITheme> loggingThemes, ILogger<ShowAllCommand> logger) : IConsoleCommand
 {
-    private readonly string[] validThemes = loggingThemes.Select(x => x.Name).ToArray();
+    private readonly string[] validThemes = [.. loggingThemes.Select(x => x.Name)];
 
     /// <inheritdoc/>
     public string[]? ArgumentNames => null;

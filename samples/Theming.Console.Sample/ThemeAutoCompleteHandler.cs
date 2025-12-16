@@ -11,7 +11,7 @@ namespace Theming.Console.Sample;
 internal sealed class ThemeAutoCompleteHandler(IEnumerable<ITheme> loggingThemes) : IAutoCompleteHandler
 {
     private const char ArgumentSeparator = ' ';
-    private readonly string[] validThemes = loggingThemes.Select(x => x.Name).ToArray();
+    private readonly string[] validThemes = [.. loggingThemes.Select(x => x.Name)];
     private LinkedList<string> autoCompletions = new();
     private LinkedListNode<string>? current;
     private string rootCommand = string.Empty;
