@@ -16,7 +16,7 @@ internal sealed class ChangeThemeCommand(IConfiguration configuration, IEnumerab
     /// </summary>
     public const string Parameter = "theme";
 
-    private readonly string[] validThemes = loggingThemes.Select(x => x.Name).ToArray();
+    private readonly string[] validThemes = [.. loggingThemes.Select(x => x.Name)];
 
     /// <inheritdoc/>
     public string[]? ArgumentNames => ["ThemeName"];
