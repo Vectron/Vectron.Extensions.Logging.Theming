@@ -18,5 +18,5 @@ public interface IThemedFormatter
     /// <param name="scopeProvider">The provider of scope data.</param>
     /// <param name="textWriter">The string writer embedding ANSI code for colors.</param>
     /// <typeparam name="TState">The type of the object to be written.</typeparam>
-    void Write<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider? scopeProvider, TextWriter textWriter);
+    public void Write<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider? scopeProvider, TextWriter textWriter);
 }

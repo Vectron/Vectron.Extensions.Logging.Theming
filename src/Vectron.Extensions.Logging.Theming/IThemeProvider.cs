@@ -12,5 +12,5 @@ public interface IThemeProvider
     /// </summary>
     /// <param name="themeName">The name of the theme.</param>
     /// <returns>The requested theme, or <see cref="NoColorTheme"/> if not found.</returns>
-    ITheme GetTheme(string themeName);
+    public ITheme GetTheme(string themeName);
 }

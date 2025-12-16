@@ -10,7 +10,7 @@ public interface ITheme
     /// <summary>
     /// Gets the unique name of this theme.
     /// </summary>
-    string Name
+    public string Name
     {
         get;
     }
@@ -20,21 +20,21 @@ public interface ITheme
     /// </summary>
     /// <param name="category">The category to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetCategoryColor(string category);
+    public string GetCategoryColor(string category);
 
     /// <summary>
     /// Get the color to use for the logging event id.
     /// </summary>
     /// <param name="eventId">The event id to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetEventIdColor(EventId eventId);
+    public string GetEventIdColor(EventId eventId);
 
     /// <summary>
     /// Get the color to use for the <see cref="Exception.Message"/>.
     /// </summary>
     /// <param name="exception">The <see cref="Exception"/> to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetExceptionColor(Exception exception);
+    public string GetExceptionColor(Exception exception);
 
     /// <summary>
     /// Get the color to use for the whole log message.
@@ -42,33 +42,33 @@ public interface ITheme
     /// <param name="logLevel">The <see cref="LogLevel"/> to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
     /// <remarks>This is only called when we color the whole line.</remarks>
-    string GetLineColor(LogLevel logLevel);
+    public string GetLineColor(LogLevel logLevel);
 
     /// <summary>
     /// Get the color to use for the <see cref="LogLevel"/>.
     /// </summary>
     /// <param name="logLevel">The <see cref="LogLevel"/> to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetLogLevelColor(LogLevel logLevel);
+    public string GetLogLevelColor(LogLevel logLevel);
 
     /// <summary>
     /// Get the color to use for the log message.
     /// </summary>
     /// <param name="message">The message to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetMessageColor(string message);
+    public string GetMessageColor(string message);
 
     /// <summary>
     /// Get the color to use for the log scope.
     /// </summary>
     /// <param name="scope">The scope to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetScopeColor(object? scope);
+    public string GetScopeColor(object? scope);
 
     /// <summary>
     /// Get the color to use for the <see cref="DateTimeOffset"/>.
     /// </summary>
     /// <param name="dateTimeOffset">The <see cref="DateTimeOffset"/> to colorize.</param>
     /// <returns>The ANSI color code, or empty string.</returns>
-    string GetTimeColor(DateTimeOffset dateTimeOffset);
+    public string GetTimeColor(DateTimeOffset dateTimeOffset);
 }
