@@ -8,7 +8,7 @@ public interface IThemedFormatterOptions
     /// <summary>
     /// Gets a value indicating whether the whole line should be colored.
     /// </summary>
-    bool ColorWholeLine
+    public bool ColorWholeLine
     {
         get;
     }
@@ -24,7 +24,7 @@ public interface IThemedFormatterOptions
     /// <summary>
     /// Gets the colors theme to use.
     /// </summary>
-    string Theme
+    public string Theme
     {
         get;
     }
